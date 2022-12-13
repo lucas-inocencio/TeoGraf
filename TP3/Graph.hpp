@@ -266,7 +266,6 @@ AdjacencyList* Graph::find_netflow(int source, int target, std::string write) {
         outfile << number_vertex << std::endl;
         for (int i = 0; i < number_vertex; i++) {
             graph_original = representation->linked_list_array[i].head;
-            residual_original = residual->linked_list_array[i].head;
             for (int j = 0; j < representation->linked_list_array[i].size; j++) {
                 outfile << i+1 << " " << graph_original->id << " " << graph_original->allocation_flow << std::endl;
                 graph_original = graph_original->next;
